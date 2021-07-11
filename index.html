@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Pixelize.me</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header">
+    <h1>Pixelize<span>.me</span></h1>
+  </header>
+  <main>
+    <div class="draw-area">
+      <div class="upper-buttons">
+        <button id="clear">clear</button>
+        <button id="preview">preview</button>
+      </div>
+
+      <aside>
+        <button class="button" id="colors-opener"><span>^</span>colors<span>^</span></button>
+        <div class="aside-menu">
+          <div class="color-selector" id="color-select-1"></div>
+          <div class="color-selector" id="color-select-2"></div>
+          <div class="color-selector" id="color-select-3"></div>
+          <div class="color-selector" id="color-select-4"></div>
+          <div class="color-selector" id="color-select-5"></div>
+          <div class="choose">custom</div>
+          <input type="color" id="color-input">
+        </div>
+      </aside>
+      <div class="workspace"></div>
+
+    </div>
+  </main>
+  <script src="generateCanva.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

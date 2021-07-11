@@ -1,0 +1,244 @@
+/* ===== RESET ================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+.button {
+    cursor: pointer;
+}
+
+/* ==== STYLES ================================ */
+
+/* BODY ======================================== */
+body {
+    background: rgba(0, 0, 0, .9);
+    overflow: hidden;
+}
+/* HEADER ===================================== */
+
+header {
+    height: 3rem;
+    padding: 0 .8rem;
+    background: rgb(40, 40, 40);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    color: #f2f2f2;
+
+    text-align: center;
+}
+
+header h1 span {
+    color: rgb(255, 99, 99);
+}
+
+/* MAIN ============================================= */
+
+.draw-area {
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upper-buttons {
+    margin-top: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    width: 37.5vw;
+}
+
+.upper-buttons button {
+    background: none;
+    border: none;
+
+    color: #f2f2f2;
+    font-family: 'Press Start 2P', cursive;
+    font-size: .75rem;
+
+    transition: .4s;
+}
+
+.upper-buttons button:hover {
+    text-decoration: underline;
+
+    transform: translateY(-.15rem);
+}
+
+/* ASIDE MENU ===================================== */
+aside {
+  position: absolute;
+
+  right: 0px;
+  top: 55%;
+  transform: translateY(-50%);
+
+  transition: .5s;
+}
+
+aside #colors-opener {
+  background: none;
+  border:none;
+  color: #f2f2f2;
+
+  font-family: 'Press Start 2P', cursive;
+  font-size: .8rem;
+
+  position: absolute;
+
+  top: 50%;
+  transform: rotate(-90deg) translateY(-50%);
+  z-index: 998;
+  right: -4rem;
+
+  transition: .5s;
+}
+
+aside #colors-opener.shown {
+  right: 1rem;
+}
+
+aside #colors-opener span {
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+
+  margin: .5rem;
+}
+
+aside .aside-menu {
+  background: rgb(40, 40, 40);
+
+  height: 80vh;
+  width: 5rem;
+
+  position: relative;
+
+  right: -5rem;
+
+  border-radius: 1rem 0 0 1rem;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1rem;
+  z-index: 999;
+
+  transition: .5s;
+}
+
+aside .aside-menu.shown {
+  right: 0;
+
+  transition: .5s;
+}
+
+aside .aside-menu .color-selector {
+  height: 2.6rem;
+  width: 2.6rem;
+
+  background: #f2f2f2;
+
+  border-radius: .6rem;
+
+  cursor: pointer;
+
+  position: relative;
+}
+
+aside .aside-menu .color-selector::after {
+  content: '';
+
+  box-sizing: border-box;
+
+  height: 2.6rem;
+  width: 2.6rem;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+
+  border: 4px solid #f2f2f2;
+
+  background: red;
+  border-radius: .6rem;
+  transition: .15s;
+}
+
+aside .aside-menu .color-selector:hover::after {
+  left: 1px;
+  top: 1px;
+}
+
+aside .aside-menu #color-select-1::after { background: black; }
+aside .aside-menu #color-select-2::after { background: red; }
+aside .aside-menu #color-select-3::after { background: green; }
+aside .aside-menu #color-select-4::after { background: blue; }
+aside .aside-menu #color-select-5::after { background: gray; }
+
+aside .choose {
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: .75rem;
+  color: #f2f2f2;
+  font-weight: bold;
+
+  border-bottom: 1px solid #f2f2f2;
+
+  margin-top: .4rem;
+}
+
+#color-input {
+  height: 3rem;
+  width: 3rem;
+
+  cursor: pointer;
+
+  background: none;
+  border: none;
+}
+
+
+/* DRAWING PART ===================================== */
+
+.workspace {
+    margin-top: .2rem;
+
+    z-index: 3;
+}
+
+table {
+    border-collapse: collapse;
+    width: 37.5vw;
+    height: 37.5vw;
+
+    border: 1px solid rgba(0, 0, 0, .9);
+}
+
+table tr td{
+    height: 8px;
+    width: 8px;
+    border: 1px solid rgba(0, 0, 0, .9);
+
+    background: #ffffff;
+
+}
