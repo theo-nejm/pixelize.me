@@ -23,7 +23,7 @@ button,
 /* BODY ======================================== */
 body {
     background: rgba(0, 0, 0, .9);
-    overflow: hidden;
+    overflow: hidden !important;
 }
 /* HEADER ===================================== */
 
@@ -94,6 +94,9 @@ aside {
   transform: translateY(-50%);
 
   transition: .5s;
+  overflow: hidden;
+
+  width: 6rem;
 }
 
 aside #colors-opener {
@@ -109,7 +112,7 @@ aside #colors-opener {
   top: 50%;
   transform: rotate(-90deg) translateY(-50%);
   z-index: 998;
-  right: -4rem;
+  right: -3rem;
 
   transition: .5s;
 }
@@ -149,7 +152,7 @@ aside .aside-menu {
 }
 
 aside .aside-menu.shown {
-  right: 0;
+  right: -1rem;
 
   transition: .5s;
 }

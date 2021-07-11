@@ -5,16 +5,16 @@ const table = document.createElement('table')
 let counterTr = 0
 let counterTd = 0
 
-while(counterTr <= 25) {
+while(counterTr <= 32) {
     const tr = document.createElement('tr')
 
-    while (counterTd <= 25){
+    while (counterTd <= 32){
         const td = document.createElement('td')
         td.classList.add('cell')
         tr.appendChild(td);
         counterTd++
     }
-    
+
     counterTd = 0
     table.appendChild(tr);
     counterTr++
