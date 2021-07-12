@@ -14,7 +14,12 @@
 
 <body>
   <header class="header">
+    <div class="divider"></div>
     <h1>Pixelize<span>.me</span></h1>
+    <button class="save-draw">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#8d7aff"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.326 18.266l-4.326-2.314-4.326 2.313.863-4.829-3.537-3.399 4.86-.671 2.14-4.415 2.14 4.415 4.86.671-3.537 3.4.863 4.829z"/></svg>
+      done
+    </button>
   </header>
   <main>
     <div class="draw-area">
@@ -39,7 +44,39 @@
 
     </div>
   </main>
+
+  <div class="result-card">
+    <h2>
+      Hey,
+      <br>
+      <span>that's awesome!</span>
+    </h2>
+
+      <div class="canvas-place"></div>
+      <div class="actions">
+        <button class="keep-drawing"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 403.142 403.142" height='24' width="24" fill="#f2f2f2">
+          <g>
+            <path d="m392.908,38.742c-6.61-6.611-15.399-10.251-24.749-10.251-9.349,0-18.138,3.641-24.749,10.251l-168.294,168.293c-1.273,1.273-2.179,2.867-2.622,4.612l-12.021,47.376c-0.137,0.542-0.212,1.088-0.257,1.634h-17.724v28.499h28.499v-17.724c0.547-0.045 1.093-0.119 1.634-0.256l47.375-12.021c1.746-0.443 3.339-1.349 4.612-2.622l168.296-168.294c13.645-13.647 13.645-35.851 0-49.497zm-24.749,9.748c4.007,0 7.773,1.56 10.606,4.393 5.849,5.849 5.849,15.365 0,21.213l-.707,.707-21.213-21.213 .707-.707c2.833-2.833 6.6-4.393 10.607-4.393zm-171.83,165.616l146.374-146.373 21.213,21.213-146.374,146.373-21.213-21.213zm-8.775,19.509l10.48,10.48-14.043,3.563 3.563-14.043z"/>
+            <rect width="28.499" x="113.994" y="289.156" height="28.499"/>
+            <rect width="28.499" x="85.496" y="317.655" height="28.499"/>
+            <rect width="28.499" x="56.997" y="346.153" height="28.498"/>
+            <rect width="28.499" x="28.499" y="317.655" height="28.499"/>
+            <rect width="28.499" x="0" y="289.156" height="28.499"/>
+          </g>
+        </svg>
+        Keep drawing
+      </button>
+        or
+      <button class="download">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="rgb(40, 40, 40)"><path d="M12 21l-8-9h6v-12h4v12h6l-8 9zm9-1v2h-18v-2h-2v4h22v-4h-2z"/></svg>
+        Download
+      </button>
+      </div>
+  </div>
+
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
   <script src="generateCanva.js"></script>
+  <script src="results.js"></script>
   <script src="script.js"></script>
 </body>
 

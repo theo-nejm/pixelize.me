@@ -1,6 +1,7 @@
 const workSpace = document.querySelector('.workspace')
 
 const table = document.createElement('table')
+table.id = 'capture';
 
 let counterTr = 0
 let counterTd = 0

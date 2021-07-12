@@ -24,6 +24,7 @@ button,
 body {
     background: rgba(0, 0, 0, .9);
     overflow: hidden !important;
+    font-family: 'Press Start 2P', cursive;
 }
 /* HEADER ===================================== */
 
@@ -34,7 +35,11 @@ header {
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+header .divider {
+  width: 6rem;
 }
 
 header h1 {
@@ -47,6 +52,38 @@ header h1 {
 
 header h1 span {
     color: rgb(255, 99, 99);
+}
+
+header .save-draw {
+  height: 2rem;
+  width: 6rem;
+
+  background: none;
+  border: 2px solid #8d7aff;
+  color: #8d7aff;
+
+  filter: brightness(1.4);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+  font-family: 'Press Start 2P', cursive;
+
+  font-size: .8rem;
+
+  border-radius: .6rem;
+
+  transition: .2s;
+}
+
+header .save-draw:hover {
+  filter: brightness(1.6);
+}
+
+header .save-draw svg {
+  margin-right: .4rem;
 }
 
 /* MAIN ============================================= */
@@ -66,6 +103,10 @@ header h1 span {
     justify-content: space-between;
 
     width: 37.5vw;
+
+    min-width: 400px;
+    max-width: 800px;
+
 }
 
 .upper-buttons button {
@@ -234,6 +275,12 @@ table {
     width: 37.5vw;
     height: 37.5vw;
 
+    min-width: 400px;
+    min-height: 400px;
+
+    max-width: 800px;
+    max-height: 800px;
+
     border: 1px solid rgba(0, 0, 0, .9);
 }
 
@@ -245,3 +292,116 @@ table tr td{
     background: #ffffff;
 
 }
+
+/* RESULT CARD ================================================= */
+
+.result-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  z-index: 999;
+
+  width: 30vw;
+  height: auto;
+
+  min-width: 300px;
+  min-height: 400px;
+
+  max-width: 600px;
+  max-height: 800px;
+
+  background:rgb(40, 40, 40);
+
+  border-radius: .6rem;
+
+  padding: 3rem;
+  padding-bottom: 1rem;
+
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: 'Press Start 2P', cursive;
+
+  font-size: .85rem;
+  line-height: 2rem;
+
+  box-shadow: -12px 12px 0 0 #8d7aff;
+}
+
+.result-card.shown {
+  display: flex;
+}
+
+.result-card h2 {
+  color: rgb(255, 99, 99);
+
+  margin-top: -1.6rem;
+
+  width: 28vw !important;
+  min-width: 280px !important;
+  max-width: 560px !important;
+
+  text-align: center;
+}
+
+.result-card h2 span {
+  color: #f2f2f2;
+}
+
+.result-card canvas {
+  height: 28vw !important;
+  width: 28vw !important;
+
+  min-width: 200px !important;
+  min-height: 200px !important;
+
+  max-width: 560px !important;
+  max-height: 560px !important;
+
+  margin: .6rem 0;
+}
+
+.actions {
+  width: 28vw !important;
+
+  min-width: 280px !important;
+
+  max-width: 560px !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #f2f2f2;
+}
+
+.actions button {
+  height: 2.4rem;
+  width: 8.4rem;
+
+  border: none;
+  background: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  padding: .4rem;
+
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.actions .download {
+  background-color: #f2f2f2;
+  color: rgb(40,40,40);
+  font-weight: 500;
+}
+
+.actions .keep-drawing {
+  border: 2px solid #f2f2f2;
+  color: #f2f2f2;
+}
+
